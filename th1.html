@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<style>
+    hr {
+        margin-left: 0px;
+        width: 420px;
+    }
+</style>
+<body>
+<h1>Sample Screen :</h1>
+<input type="text" style="width: 300px " id="txtValue">
+<button style="border-radius: 5px" onclick="addElement()">Add</button>
+<button style="border-radius: 5px" onclick="displayArray()">Display</button>
+<div id="result"></div>
+<script>
+
+    // let arr = [ 23, 12, 25 ];
+    // for (i = 0; i < arr.length; i++) {
+    //     document.getElementById("display").innerHTML +=  "element " + i + " = "+ arr[i] + "<br>";
+    // }
+    let x = 0;
+    let array = [];
+
+    function addElement() {
+        array[x] = document.getElementById("txtValue").value;
+        x++;
+        document.getElementById("txtValue").value = "";
+    }
+
+    function displayArray() {
+        let e = "<hr/>";
+        for (i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>" +"<hr/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị trong mảng</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let value = parseInt(prompt(" Enter the number"));
+     let s = document.getElementById("result");
+    let numbers = [-3, 5, 1, 3, 2, 10];
+        let x = numbers.indexOf(value);
+        if (x >= 0) {
+            s.innerHTML = " vị trí của phần tử là:" + x;
+        }else {
+            alert( "not in")
+        }
+
+</script>
+</body>
+</html>
